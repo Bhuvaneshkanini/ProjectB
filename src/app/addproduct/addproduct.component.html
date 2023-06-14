@@ -1,0 +1,19 @@
+<div class="container">
+    <table class="table">
+        <thead >
+        <tr>
+            <th scope="col">Product Id</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Availability</th>
+        </tr>
+        </thead>
+        <tbody *ngIf="product && product.length > 0">
+            <tr *ngFor="let i of product">
+                <td>{{i.productId}}</td>
+                <td>{{i.productName}}</td>
+                <td>{{i.availability}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!product || product.length <= 0" align="center">no Products Found</p>
+</div>
